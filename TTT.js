@@ -37,9 +37,10 @@ boxes.forEach((box) => {
 
 const checkwinner = () => {
   for (let pattern of winningCombinations) {
-    const val1 = boxes[pattern[0]].innerText;
-    const val2 = boxes[pattern[1]].innerText;
-    const val3 = boxes[pattern[2]].innerText;
+    const [a, b, c] = pattern;
+    const val1 = boxes[a].innerText;
+    const val2 = boxes[b].innerText;
+    const val3 = boxes[c].innerText;
 
     if (val1 && val1 === val2 && val2 === val3) {
       return true;
@@ -49,28 +50,17 @@ const checkwinner = () => {
 };
 
 const isDraw = () => {
-  for (let box of boxes) {
-    if (box.innerText === "") {
-      return false;
-    }
-  }
-  return true;
+  return Array.from(boxes).every((box) => box.innerText !== "");
 };
 
 const showwinner = (winner) => {
-  msg.innerText = `Congratulations, The Winner is ${winner}! 🏆`;
+  msg.innerText = `Congratulations. The Winner is ${winner}! 🏆`;
   win.classList.remove("hide");
-  new_btn.addEventListener("click", () => {
-    msg.innerText = "";
-  });
   disableBoxes();
 };
 
 const showDraw = () => {
   msg.innerText = "It's a Draw! Try Again.";
-  new_btn.addEventListener("click", () => {
-    msg.innerText = "";
-  });
   win.classList.remove("hide");
 };
 
@@ -78,21 +68,18 @@ const disableBoxes = () => {
   boxes.forEach((box) => (box.disabled = true));
 };
 
-// Reset game
-const resetGame = () => {
+const enableBoxes = () => {
   boxes.forEach((box) => {
+    box.disabled = false;
     box.innerText = "";
-    win.classList.remove("hide");
-    new_btn.addEventListener("click", () => {
-      msg.innerText = "";
-    });
-    disableBoxes();
   });
-  turn = true;
-  new_btn.addEventListener("click", () => {
-    msg.innerText = "";
-  });
+};
+
+const resetGame = () => {
+  enableBoxes();
+  msg.innerText = "";
   win.classList.add("hide");
+  turn = true;
 };
 
 resetbtn.addEventListener("click", resetGame);
