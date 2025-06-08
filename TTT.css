@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #cac6e3;
+  color: #333;
+  text-align: center;
+  margin: 20px;
+}
+
+.head {
+  font-size: 3rem;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.main {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 60vmin;
+  height: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8vmin;
+  justify-content: center;
+  align-content: center;
+}
+
+.box {
+  height: 15vmin;
+  width: 15vmin;
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 6vmin;
+  cursor: pointer;
+  background-color: rgb(255, 239, 239);
+  transition: background-color 0.3s ease;
+  color: tomato;
+}
+
+.box:hover {
+  background-color: #ffffc7;
+}
+
+.reset_button {
+  height: fit-content;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgb(48, 48, 47);
+  transition: background-color 0.3s ease;
+  color: rgb(255, 241, 241);
+}
+
+.reset_button:hover {
+  background-color: #666666;
+}
+
+.new_button {
+  height: fit-content;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgb(255, 163, 163);
+  transition: background-color 0.3s ease;
+  color: rgb(255, 241, 241);
+}
+
+.new_button:hover {
+  background-color: #9d9d9d;
+}
+
+.msg {
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
