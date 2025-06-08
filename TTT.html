@@ -3,30 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic-Tac-Toe</title>
-    <link rel="stylesheet" href="TTT.css" />
+    <title>Tic Tac Toe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
   </head>
-  <body>
-    <h2 class="head">Tic-Tac Toe</h2>
-    <div id="win">
-      <p class="msg"></p>
-      <button class="new_button">New Game!</button>
+  <body class="font-sans bg-[#cac6e3] text-gray-700 text-center m-5">
+    <h1 class="text-4xl underline mb-5 font-bold">Tic Tac Toe</h1>
+    
+    <div id="win" class="hide">
+      <p class="msg text-red-500 text-2xl font-bold font-sans"></p>
+      <button class="new_button h-fit w-fit px-2 py-1.5 rounded-2xl border-none mt-5 shadow-md text-sm cursor-pointer bg-[rgb(255,163,163)] hover:bg-[#9d9d9d] transition-colors duration-300 text-[rgb(255,241,241)]">
+        New Game
+      </button>
     </div>
-    <div class="main">
-      <div class="game">
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
+
+    <div class="h-[60vh] flex justify-center items-center">
+      <div class="w-[50vmin] h-[50vmin] flex flex-wrap gap-[1vmin] justify-center content-center">
+        <button class="box h-[13vmin] w-[13vmin] rounded-2xl border-none shadow-md text-5xl cursor-pointer bg-[rgb(255,239,239)] hover:bg-[#ffffc7] transition-colors duration-300 text-tomato"></button>
+        <button class="box h-[13vmin] w-[13vmin] rounded-2xl border-none shadow-md text-5xl cursor-pointer bg-[rgb(255,239,239)] hover:bg-[#ffffc7] transition-colors duration-300 text-tomato"></button>
+        <button class="box h-[13vmin] w-[13vmin] rounded-2xl border-none shadow-md text-5xl cursor-pointer bg-[rgb(255,239,239)] hover:bg-[#ffffc7] transition-colors duration-300 text-tomato"></button>
+        <button class="box h-[13vmin] w-[13vmin] rounded-2xl border-none shadow-md text-5xl cursor-pointer bg-[rgb(255,239,239)] hover:bg-[#ffffc7] transition-colors duration-300 text-tomato"></button>
+        <button class="box h-[13vmin] w-[13vmin] rounded-2xl border-none shadow-md text-5xl cursor-pointer bg-[rgb(255,239,239)] hover:bg-[#ffffc7] transition-colors duration-300 text-tomato"></button>
+        <button class="box h-[13vmin] w-[13vmin] rounded-2xl border-none shadow-md text-5xl cursor-pointer bg-[rgb(255,239,239)] hover:bg-[#ffffc7] transition-colors duration-300 text-tomato"></button>
+        <button class="box h-[13vmin] w-[13vmin] rounded-2xl border-none shadow-md text-5xl cursor-pointer bg-[rgb(255,239,239)] hover:bg-[#ffffc7] transition-colors duration-300 text-tomato"></button>
+        <button class="box h-[13vmin] w-[13vmin] rounded-2xl border-none shadow-md text-5xl cursor-pointer bg-[rgb(255,239,239)] hover:bg-[#ffffc7] transition-colors duration-300 text-tomato"></button>
+        <button class="box h-[13vmin] w-[13vmin] rounded-2xl border-none shadow-md text-5xl cursor-pointer bg-[rgb(255,239,239)] hover:bg-[#ffffc7] transition-colors duration-300 text-tomato"></button>
       </div>
     </div>
-    <button class="reset_button">Reset Game!</button>
+
+    <button class="reset_button h-fit w-fit px-2 py-1.5 rounded-2xl border-none shadow-md text-sm cursor-pointer bg-[rgb(48,48,47)] hover:bg-[#666666] transition-colors duration-300 text-[rgb(255,241,241)]">
+      Reset Game
+    </button>
+
+    <script src="TTT.js"></script>
   </body>
-  <script src="TTT.js"></script>
-  <!-- <script src="xix.js"></script> -->
 </html>
